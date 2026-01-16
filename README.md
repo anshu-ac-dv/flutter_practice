@@ -1,20 +1,56 @@
-# flutter_practice
+# Flutter Learning
 
-## 🟢 Level 1: The Essentials (Easy Level).
->* Sound Null Safety: Understanding ?, !, late, and required. This is the #1 way to prevent app crashes.
->* Collections & Methods: Mastering List, Map, and Set, along with higher-order functions like .map(), .where(), and .toList().
->* Object-Oriented Basics: Classes, constructors (named, factory, and redirecting), and this syntax.
->* Named & Optional Parameters: Crucial because Flutter widgets are essentially large trees of named parameters.
+## 🟢 Level 1: Flutter & Dart Foundations (The "Junior" Base)
+Target: Being able to build a functional, multi-screen app from scratch.
 
-## 🟡 Level 2: The Logic (Intermediate Level).
->* Asynchronous Programming: Mastering Future, async, and await. You cannot build a modern app without handling network calls or local databases.
->* Error Handling: Using try-catch blocks and creating custom exceptions to make your app resilient.
->* Iterables & Generators: Understanding yield and sync* for creating custom data sequences.
->* Mixins: Using the with keyword to reuse code across multiple class hierarchies without the limitations of multiple inheritance.
+### Dart Basics
+>* Null Safety: Mastery of ?, !, late, and required.
+>* Collections: Using .map(), .where(), and .fold() to manipulate data.
+>* Asynchronous Basics: Future, async, and await for simple API calls.
 
-## 🔴 Level 3: The "Senior" Skillset (Advanced Level).
->* Streams & Sinks: The backbone of reactive programming (BLoC, RxDart). You must understand StreamController, broadcast streams, and StreamBuilder.
->* Isolates (Concurrency): Dart is single-threaded. For heavy tasks like image processing or complex JSON parsing, you must learn how to use Isolates to keep the UI at 60 FPS.
->* Generic Types: Writing reusable logic and API wrappers using <T> so your code isn't tied to a specific data model.
->* Dart FFI (Foreign Function Interface): If you need to call C or Rust code for high-performance features (like custom encryption or video processing).
->* Extension Methods: Adding new functionality to existing libraries (e.g., adding a .toCapitalized() method to the String class).
+### Flutter UI
+>*The Big Three: StatelessWidget, StatefulWidget, and BuildContext.
+>* Layout Engine: Understanding constraints ("Constraints go down, sizes go up, parent sets position").
+>* Navigation: Basic Navigator.push/pop and the concept of a "Route."
+
+## 🟡 Level 2: Scalable Development (The "Mid-Level" Standard)
+### Target: Building apps that can handle 1,000+ users and complex data.
+
+### Architecture & Clean Code
+>* SOLID Principles: Learning how to write code that is easy to change and test.
+>* Separation of Concerns: Moving logic out of widgets and into Controllers or BLoCs.
+>* Dependency Injection (DI): Using tools like get_it or Provider to manage object lifecycles.
+
+State Management
+Riverpod 3.0 (2026 Trend): Currently the industry favorite for its compile-time safety and lack of boilerplate.
+
+BLoC / Cubit: The enterprise standard. If you want a job at a large bank or fintech company, you must know BLoC for its strict event-driven audit trails.
+
+Networking & Persistence
+Dio/Http: Advanced usage like Interceptors (for refreshing tokens) and request cancellation.
+
+Local Databases: Isar (the successor to Hive) or Sqflite for offline-first apps.
+
+## 🔴 Level 3: Performance & Mastery (The "High-Paying" Skillset)
+Target: Optimizing apps for low-end devices and complex enterprise needs.
+
+Advanced Dart
+Isolates: Moving heavy JSON parsing or image processing to a background thread to prevent UI "jank."
+
+Streams & RxDart: Handling real-time data (chat apps, stock tickers, or sensor data).
+
+Extensions & Mixins: Creating high-quality, reusable utility libraries.
+
+Flutter Internals
+The Three Trees: How the Widget, Element, and RenderObject trees interact.
+
+Impeller vs Skia: Understanding the rendering engine to fix frame-rate drops.
+
+Custom Painting: Using CustomPainter to build unique, high-performance UI components that standard widgets can't handle.
+
+DevOps & Testing (The Hiring Decider)
+Testing: Writing Unit Tests for logic, Widget Tests for components, and Integration Tests (Patrol) for end-to-end flows.
+
+CI/CD: Setting up GitHub Actions or Codemagic to automate app deployments.
+
+Platform Channels: Writing native code (Swift/Kotlin) when Flutter doesn't have a specific plugin.
